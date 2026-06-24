@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ app_title }}</title>
+  <style>
+    :root {
+      --bg: #fff8f1;
+      --panel: #ffffff;
+      --panel-soft: #fff1e5;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --line: #fed7aa;
+      --brand: #ea580c;
+      --brand-dark: #9a3412;
+      --accent: #fb923c;
+      --shadow: 0 18px 40px rgba(154, 52, 18, 0.12);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(251, 146, 60, 0.16), transparent 28%),
+        radial-gradient(circle at right center, rgba(234, 88, 12, 0.10), transparent 22%),
+        var(--bg);
+    }
+    a { color: inherit; }
+    .page {
+      width: min(1200px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 40px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.4fr .9fr;
+      gap: 18px;
+      margin-bottom: 22px;
+    }
+    .hero-card, .panel {
+      background: var(--panel);
+      border: 1px solid rgba(251, 146, 60, 0.28);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-card {
+      padding: 28px;
+      min-height: 220px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--panel-soft);
+      color: var(--brand-dark);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.05;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 60ch;
+    }
+    .stat-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      align-content: start;
+      padding: 20px;
+    }
+    .mini-stat {
+      background: linear-gradient(180deg, #fff7ed, #ffffff);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .mini-stat strong {
+      display: block;
+      font-size: 1.55rem;
+      margin-top: 6px;
+    }
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+    .two-col {
+      grid-template-columns: 320px 1fr;
+      align-items: start;
+    }
+    .panel {
+      padding: 22px;
+    }
+    .panel h2, .panel h3 {
+      margin-top: 0;
+    }
+    .filters label,
+    .upload-grid label {
+      display: block;
+      margin-bottom: 14px;
+      font-size: .94rem;
+      color: var(--brand-dark);
+      font-weight: 600;
+    }
+    .filters input,
+    .filters select,
+    .upload-grid input,
+    .upload-grid select,
+    .upload-grid textarea {
+      width: 100%;
+      margin-top: 8px;
+      border-radius: 14px;
+      border: 1px solid #fdba74;
+      background: #fffdfa;
+      padding: 12px 14px;
+      color: var(--ink);
+      font: inherit;
+    }
+    .filters select[multiple] {
+      min-height: 120px;
+    }
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    button {
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--brand), var(--accent));
+      color: white;
+      padding: 12px 18px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 10px 24px rgba(234, 88, 12, 0.25);
+    }
+    button.secondary {
+      background: white;
+      color: var(--brand-dark);
+      border: 1px solid #fdba74;
+      box-shadow: none;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .metric {
+      background: linear-gradient(180deg, #fff7ed, #ffffff);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .metric span {
+      display: block;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+    .metric strong {
+      display: block;
+      font-size: 1.6rem;
+      margin-top: 8px;
+    }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .insights {
+      padding-left: 18px;
+      margin: 14px 0 0;
+    }
+    .insights li {
+      margin-bottom: 10px;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .chart-card {
+      background: #fffdf9;
+      border: 1px solid #ffedd5;
+      border-radius: 20px;
+      padding: 12px;
+      overflow: hidden;
+    }
+    .chart-card.full {
+      grid-column: 1 / -1;
+    }
+    .chart-card img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .94rem;
+    }
+    .data-table th,
+    .data-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #ffedd5;
+      text-align: left;
+    }
+    .data-table th {
+      background: #fff7ed;
+      color: var(--brand-dark);
+    }
+    .upload-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .upload-grid .full {
+      grid-column: 1 / -1;
+    }
+    .note, .error {
+      border-radius: 16px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    .note {
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      color: var(--brand-dark);
+    }
+    .error {
+      background: #fff1f2;
+      border: 1px solid #fda4af;
+      color: #9f1239;
+    }
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      padding: 8px 12px;
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      border-radius: 999px;
+      color: var(--brand-dark);
+      font-size: .85rem;
+      font-weight: 700;
+    }
+    .empty {
+      padding: 18px;
+      border-radius: 18px;
+      background: #fff7ed;
+      color: var(--brand-dark);
+      border: 1px dashed #fb923c;
+    }
+    @media (max-width: 980px) {
+      .hero, .two-col, .chart-grid, .metrics, .upload-grid, .stat-strip {
+        grid-template-columns: 1fr;
+      }
+      .page {
+        width: min(100% - 20px, 1200px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <article class="hero-card">
+        <span class="eyebrow">Python analytics for Vercel</span>
+        <h1>{{ app_title }}</h1>
+        <p>{{ app_description }}</p>
+        <p>
+          The current version is adapted for Vercel using Flask, while keeping the
+          same analytics pipeline: loading data, cleaning, filtering, charting,
+          summary generation and result export.
+        </p>
+      </article>
+      <aside class="hero-card stat-strip">
+        <div class="mini-stat">
+          <span>Framework</span>
+          <strong>Flask</strong>
+        </div>
+        <div class="mini-stat">
+          <span>Charts</span>
+          <strong>4 views</strong>
+        </div>
+        <div class="mini-stat">
+          <span>Dataset</span>
+          <strong>CSV ready</strong>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid two-col">
+      <aside class="panel filters">
+        <div class="section-title">
+          <h2>Sample dataset filters</h2>
+          <span class="badge">{{ sample.row_count }} rows</span>
+        </div>
+        <form method="get" action="/">
+          <label>
+            Start date
+            <input type="date" name="start_date" value="{{ sample.filters.start_date.isoformat() if sample.filters.start_date else sample.date_min }}">
+          </label>
+          <label>
+            End date
+            <input type="date" name="end_date" value="{{ sample.filters.end_date.isoformat() if sample.filters.end_date else sample.date_max }}">
+          </label>
+          <label>
+            Regions
+            <select name="region" multiple>
+              {% for region in sample.options.regions %}
+              <option value="{{ region }}" {% if region in sample.filters.regions %}selected{% endif %}>{{ region }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <label>
+            Categories
+            <select name="category" multiple>
+              {% for category in sample.options.categories %}
+              <option value="{{ category }}" {% if category in sample.filters.categories %}selected{% endif %}>{{ category }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <label>
+            Products
+            <select name="product" multiple>
+              {% for product in sample.options.products %}
+              <option value="{{ product }}" {% if product in sample.filters.products %}selected{% endif %}>{{ product }}</option>
+              {% endfor %}
+            </select>
+          </label>
+          <div class="button-row">
+            <button type="submit">Apply filters</button>
+            <a href="/" style="text-decoration:none;"><button class="secondary" type="button">Reset</button></a>
+          </div>
+        </form>
+      </aside>
+
+      <section class="panel">
+        <div class="section-title">
+          <div>
+            <h2>Built-in sample analytics</h2>
+            <div class="meta">Source: {{ sample.source_name }}</div>
+          </div>
+          <span class="badge">{{ sample.row_count }} rows</span>
+        </div>
+
+        {% if sample.empty %}
+          <div class="empty">No rows match the selected filters.</div>
+        {% else %}
+          <div class="metrics">
+            <div class="metric"><span>Total sales</span><strong>${{ "{:,.0f}".format(sample.summary.total_sales) }}</strong></div>
+            <div class="metric"><span>Total profit</span><strong>${{ "{:,.0f}".format(sample.summary.total_profit) }}</strong></div>
+            <div class="metric"><span>Margin</span><strong>{{ "%.2f"|format(sample.summary.profit_margin_pct) }}%</strong></div>
+            <div class="metric"><span>Avg order value</span><strong>${{ "{:,.0f}".format(sample.summary.average_order_value) }}</strong></div>
+          </div>
+
+          <div class="note">
+            Best region: <strong>{{ sample.summary.best_region }}</strong>.
+            Top product: <strong>{{ sample.summary.top_product }}</strong>.
+            Sales volatility: <strong>${{ "{:,.0f}".format(sample.summary.sales_volatility) }}</strong>.
+          </div>
+
+          <h3>Analytical insights</h3>
+          <ul class="insights">
+            {% for insight in sample.insights %}
+            <li>{{ insight }}</li>
+            {% endfor %}
+          </ul>
+
+          <div class="chart-grid">
+            <div class="chart-card">{{ sample.charts.trend|safe }}</div>
+            <div class="chart-card">{{ sample.charts.region|safe }}</div>
+            <div class="chart-card full">{{ sample.charts.bubble|safe }}</div>
+            <div class="chart-card full"><img src="{{ sample.charts.histogram }}" alt="Customer rating distribution"></div>
+          </div>
+
+          <h3>Preview table</h3>
+          <div style="overflow:auto;">{{ sample.table_html|safe }}</div>
+        {% endif %}
+      </section>
+    </section>
+
+    <section class="panel" style="margin-top: 18px;">
+      <div class="section-title">
+        <div>
+          <h2>Upload your own CSV</h2>
+          <div class="meta">For uploaded files on Vercel, analysis and downloads happen in the same request.</div>
+        </div>
+      </div>
+
+      {% if upload_error %}
+        <div class="error">{{ upload_error }}</div>
+      {% endif %}
+
+      <form method="post" action="/upload" enctype="multipart/form-data">
+        <div class="upload-grid">
+          <label class="full">
+            CSV file
+            <input type="file" name="dataset" accept=".csv" required>
+          </label>
+          <label>
+            Start date
+            <input type="date" name="start_date">
+          </label>
+          <label>
+            End date
+            <input type="date" name="end_date">
+          </label>
+          <label>
+            Regions
+            <input type="text" name="regions" placeholder="North, West">
+          </label>
+          <label>
+            Categories
+            <input type="text" name="categories" placeholder="Electronics, Office">
+          </label>
+          <label class="full">
+            Products
+            <input type="text" name="products" placeholder="Laptop, Desk">
+          </label>
+        </div>
+        <div class="button-row">
+          <button type="submit" name="action" value="analyze">Analyze upload</button>
+          <button class="secondary" type="submit" name="action" value="download_csv">Download CSV</button>
+          <button class="secondary" type="submit" name="action" value="download_json">Download JSON</button>
+        </div>
+      </form>
+
+      {% if upload %}
+        <hr style="border:none; border-top:1px solid #fed7aa; margin:24px 0;">
+        <div class="section-title">
+          <div>
+            <h2>Uploaded file analytics</h2>
+            <div class="meta">Source: {{ upload.source_name }}</div>
+          </div>
+          <span class="badge">{{ upload.row_count }} rows</span>
+        </div>
+
+        {% if upload.empty %}
+          <div class="empty">No rows match the selected filters in the uploaded file.</div>
+        {% else %}
+          <div class="metrics">
+            <div class="metric"><span>Total sales</span><strong>${{ "{:,.0f}".format(upload.summary.total_sales) }}</strong></div>
+            <div class="metric"><span>Total profit</span><strong>${{ "{:,.0f}".format(upload.summary.total_profit) }}</strong></div>
+            <div class="metric"><span>Margin</span><strong>{{ "%.2f"|format(upload.summary.profit_margin_pct) }}%</strong></div>
+            <div class="metric"><span>Avg order value</span><strong>${{ "{:,.0f}".format(upload.summary.average_order_value) }}</strong></div>
+          </div>
+
+          <div class="note">
+            Best region: <strong>{{ upload.summary.best_region }}</strong>.
+            Top product: <strong>{{ upload.summary.top_product }}</strong>.
+            Sales volatility: <strong>${{ "{:,.0f}".format(upload.summary.sales_volatility) }}</strong>.
+          </div>
+
+          <ul class="insights">
+            {% for insight in upload.insights %}
+            <li>{{ insight }}</li>
+            {% endfor %}
+          </ul>
+
+          <div class="chart-grid">
+            <div class="chart-card">{{ upload.charts.trend|safe }}</div>
+            <div class="chart-card">{{ upload.charts.region|safe }}</div>
+            <div class="chart-card full">{{ upload.charts.bubble|safe }}</div>
+            <div class="chart-card full"><img src="{{ upload.charts.histogram }}" alt="Uploaded ratings distribution"></div>
+          </div>
+
+          <h3>Preview table</h3>
+          <div style="overflow:auto;">{{ upload.table_html|safe }}</div>
+        {% endif %}
+      {% endif %}
+    </section>
+  </main>
+</body>
+</html>
