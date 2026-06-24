@@ -17,6 +17,7 @@ DataScope Analytics is a browser-based analytics project built completely in Pyt
 - Separate custom resources with manual row entry
 - Import CSV text into named custom resources
 - Automatic adaptation to common English and Russian column aliases
+- Interface language switch: Russian / English
 - Data cleaning and validation
 - Filtering by date, region, category and product
 - 3 interactive charts and 1 additional histogram
@@ -62,6 +63,7 @@ Open `http://localhost:8501` in your browser.
 - You can create multiple named resources directly in the sidebar.
 - Each resource can be filled by manual row entry or by pasted CSV text.
 - Custom resources are separate from the regular `Upload CSV` source.
+- In manual row entry, `sales` means unit price for one item, and the app converts it into the total sales amount for the row.
 
 ## Streamlit Community Cloud
 
