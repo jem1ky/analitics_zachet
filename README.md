@@ -14,6 +14,8 @@ DataScope Analytics is a browser-based analytics project built completely in Pyt
 ## Features
 
 - CSV upload or built-in sample dataset
+- Separate custom resources with manual row entry
+- Import CSV text into named custom resources
 - Data cleaning and validation
 - Filtering by date, region, category and product
 - 3 interactive charts and 1 additional histogram
@@ -53,6 +55,12 @@ Open `http://localhost:8501` in your browser.
 - A valid uploaded CSV is kept only during the current browser session.
 - If the uploaded file is invalid, it is cleared automatically and must be uploaded again.
 - After a fresh page reopen, the uploaded file is not kept and should be uploaded again.
+
+## Custom resources
+
+- You can create multiple named resources directly in the sidebar.
+- Each resource can be filled by manual row entry or by pasted CSV text.
+- Custom resources are separate from the regular `Upload CSV` source.
 
 ## Streamlit Community Cloud
 

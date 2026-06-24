@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from io import BytesIO
+from io import BytesIO, StringIO
 
 import numpy as np
 import pandas as pd
@@ -79,6 +79,20 @@ def _read_csv_bytes(payload: bytes) -> pd.DataFrame:
     raise DataValidationError("The file encoding is not supported. Use UTF-8 or CP1251 CSV.")
 
 
+def load_text_dataset(csv_text: str) -> pd.DataFrame:
+    if not csv_text or not csv_text.strip():
+        raise DataValidationError("CSV text is empty. Paste data with headers and rows.")
+
+    try:
+        frame = pd.read_csv(StringIO(csv_text.strip()))
+    except EmptyDataError as error:
+        raise DataValidationError("The pasted CSV text is empty.") from error
+    except ParserError as error:
+        raise DataValidationError("Could not parse the pasted CSV text.") from error
+
+    return prepare_dataset(frame)
+
+
 def load_uploaded_dataset(uploaded_file) -> pd.DataFrame:
     if uploaded_file is None:
         raise DataValidationError("No file was uploaded.")
@@ -98,4 +112,3 @@ def load_sample_dataset() -> pd.DataFrame:
     sample_path = ensure_sample_data(SAMPLE_DATA_PATH)
     frame = pd.read_csv(sample_path)
     return prepare_dataset(frame)
-
