@@ -45,3 +45,52 @@ def test_load_text_dataset_accepts_valid_csv_text():
     assert len(prepared) == 1
     assert prepared.iloc[0]["product"] == "Laptop"
     assert prepared.iloc[0]["month"] == "2025-04"
+
+
+def test_prepare_dataset_adapts_russian_column_names():
+    frame = pd.DataFrame(
+        [
+            {
+                "дата": "2025-05-01",
+                "регион": "Север",
+                "категория": "Электроника",
+                "товар": "Ноутбук",
+                "продажи": 2400,
+                "прибыль": 480,
+                "заказы": 12,
+                "рейтинг клиента": 4.9,
+            }
+        ]
+    )
+
+    prepared = prepare_dataset(frame)
+
+    assert list(prepared[["region", "category", "product"]].iloc[0]) == [
+        "Север",
+        "Электроника",
+        "Ноутбук",
+    ]
+    assert prepared.iloc[0]["customer_rating"] == 4.9
+
+
+def test_prepare_dataset_derives_profit_from_sales_and_cost():
+    frame = pd.DataFrame(
+        [
+            {
+                "order date": "2025-05-02",
+                "sales region": "West",
+                "department": "Office",
+                "item": "Chair",
+                "revenue": 1000,
+                "cost": 760,
+                "quantity": 5,
+                "rating": 4.4,
+            }
+        ]
+    )
+
+    prepared = prepare_dataset(frame)
+
+    assert prepared.iloc[0]["sales"] == 1000
+    assert prepared.iloc[0]["profit"] == 240
+    assert prepared.iloc[0]["orders"] == 5

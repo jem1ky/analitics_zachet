@@ -16,6 +16,7 @@ DataScope Analytics is a browser-based analytics project built completely in Pyt
 - CSV upload or built-in sample dataset
 - Separate custom resources with manual row entry
 - Import CSV text into named custom resources
+- Automatic adaptation to common English and Russian column aliases
 - Data cleaning and validation
 - Filtering by date, region, category and product
 - 3 interactive charts and 1 additional histogram
