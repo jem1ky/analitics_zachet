@@ -3,7 +3,6 @@ __pycache__/
 .venv/
 *.log
 *.pyc
-.vercel/
 data/exports/*.csv
 data/exports/*.json
 

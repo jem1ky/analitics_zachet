@@ -1,10 +1,10 @@
 # DataScope Analytics
 
-DataScope Analytics is a browser-based analytics project built in Python and adapted for deployment on Vercel. The application loads sales data, cleans it, filters it, builds charts and generates a short analytical summary.
+DataScope Analytics is a browser-based analytics project built completely in Python with Streamlit. The application loads sales data, cleans it, filters it, builds charts and generates a short analytical summary.
 
 ## Stack
 
-- Flask
+- Streamlit
 - pandas
 - numpy
 - plotly
@@ -21,7 +21,7 @@ DataScope Analytics is a browser-based analytics project built in Python and ada
 - Export of filtered dataset and summary
 - Error handling for invalid files
 - Automated tests
-- Vercel-compatible Python entrypoint
+- Session-based upload handling
 
 ## Project structure
 
@@ -34,7 +34,7 @@ project_NOW/
 |   +-- services/
 |   `-- utils/
 +-- data/
-+-- templates/
++-- .streamlit/
 +-- tests/
 `-- main.py
 ```
@@ -43,21 +43,20 @@ project_NOW/
 
 ```bash
 python -m pip install -r requirements.txt
-python main.py
+python -m streamlit run main.py
 ```
 
-Open `http://127.0.0.1:5000` in your browser.
+Open `http://localhost:8501` in your browser.
 
-## Vercel deployment
+## Upload behavior
 
-The project is prepared for Vercel's official Python runtime. Vercel detects the `Flask` app instance named `app` from `main.py`.
+- A valid uploaded CSV is kept only during the current browser session.
+- If the uploaded file is invalid, it is cleared automatically and must be uploaded again.
+- After a fresh page reopen, the uploaded file is not kept and should be uploaded again.
 
-You can deploy with:
+## Streamlit Community Cloud
 
-```bash
-vercel
-vercel --prod
-```
+The project is ready for deployment to Streamlit Community Cloud from the GitHub repository.
 
 ## Testing
 
