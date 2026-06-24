@@ -1,0 +1,145 @@
+date,region,category,product,sales,profit,orders,customer_rating
+2025-01-07,West,Electronics,Smartphone,18236.0,4096.81,56,4.5
+2025-01-11,West,Home,Coffee Machine,51948.0,15431.06,104,3.93
+2025-01-11,North,Home,Air Purifier,18149.0,3976.17,72,4.89
+2025-01-12,South,Electronics,Headphones,42905.0,12914.73,76,3.84
+2025-01-13,East,Electronics,Headphones,49362.0,8037.15,59,3.57
+2025-01-13,East,Home,Air Purifier,27639.0,5569.29,32,3.78
+2025-01-19,West,Office,Monitor,32983.0,10000.09,84,3.97
+2025-01-21,North,Office,Chair,16520.0,5528.2,94,4.68
+2025-01-21,East,Office,Desk,19405.0,5244.6,112,4.95
+2025-01-23,South,Office,Chair,38620.0,5176.62,106,4.45
+2025-01-24,North,Electronics,Laptop,49149.0,10643.38,66,4.55
+2025-01-27,South,Home,Vacuum,48388.0,9580.62,31,4.84
+2025-02-02,East,Electronics,Headphones,52963.0,9081.39,103,3.92
+2025-02-04,North,Home,Air Purifier,34027.0,8340.8,28,3.67
+2025-02-05,West,Office,Monitor,19741.0,4544.97,114,4.54
+2025-02-06,North,Electronics,Laptop,44759.0,6747.22,104,3.51
+2025-02-06,South,Home,Air Purifier,13479.0,2912.51,118,4.11
+2025-02-09,West,Home,Air Purifier,33415.0,6810.8,47,4.45
+2025-02-16,South,Electronics,Smartphone,44083.0,9858.77,106,4.65
+2025-02-16,South,Office,Desk,42466.0,10267.75,33,3.96
+2025-02-16,East,Office,Monitor,26092.0,6930.6,36,4.68
+2025-02-20,North,Office,Monitor,49772.0,13252.65,69,4.67
+2025-02-20,West,Electronics,Smartphone,13090.0,1830.12,98,4.19
+2025-02-22,East,Home,Coffee Machine,43887.0,9190.16,64,3.75
+2025-03-03,East,Electronics,Laptop,40036.0,10528.12,84,4.12
+2025-03-04,North,Electronics,Smartphone,29367.0,4090.32,57,4.94
+2025-03-05,South,Office,Monitor,26685.0,6602.62,76,4.78
+2025-03-05,East,Home,Coffee Machine,16963.0,4228.57,100,4.89
+2025-03-08,North,Office,Desk,55611.0,15233.83,68,4.95
+2025-03-09,East,Office,Monitor,13997.0,3200.81,42,3.72
+2025-03-12,South,Home,Vacuum,48408.0,13471.07,88,4.44
+2025-03-13,North,Home,Vacuum,49380.0,13713.61,99,3.91
+2025-03-13,South,Electronics,Laptop,16626.0,5296.59,37,3.8
+2025-03-16,West,Electronics,Headphones,39890.0,7830.86,83,3.53
+2025-03-22,West,Office,Chair,58010.0,13116.45,69,3.62
+2025-03-26,West,Home,Vacuum,35359.0,8060.28,66,4.36
+2025-04-03,North,Home,Air Purifier,18731.0,4530.8,54,4.51
+2025-04-05,East,Office,Monitor,24286.0,7915.53,42,3.57
+2025-04-07,South,Office,Chair,17171.0,5520.86,117,3.56
+2025-04-08,East,Electronics,Headphones,27222.0,8973.4,85,4.27
+2025-04-09,North,Electronics,Smartphone,34727.0,6206.92,115,4.28
+2025-04-11,West,Office,Chair,49056.0,13027.58,63,3.64
+2025-04-15,West,Electronics,Headphones,54758.0,17334.1,36,3.97
+2025-04-20,South,Electronics,Laptop,25499.0,6759.1,94,4.65
+2025-04-23,South,Home,Vacuum,38632.0,7788.32,54,4.71
+2025-04-23,North,Office,Monitor,33067.0,4125.26,59,4.84
+2025-04-25,East,Home,Vacuum,32884.0,11125.4,39,4.62
+2025-04-26,West,Home,Coffee Machine,47845.0,8504.03,25,3.86
+2025-05-01,West,Home,Air Purifier,34434.0,10077.04,105,3.66
+2025-05-01,East,Home,Air Purifier,25749.0,8328.72,72,4.33
+2025-05-04,West,Electronics,Laptop,42430.0,6080.11,93,4.13
+2025-05-04,South,Electronics,Headphones,12668.0,2160.2,51,4.52
+2025-05-05,North,Electronics,Laptop,17892.0,5418.5,109,3.77
+2025-05-06,North,Office,Desk,40770.0,12736.7,29,3.97
+2025-05-14,North,Home,Coffee Machine,49315.0,16461.44,72,3.72
+2025-05-18,East,Office,Monitor,26445.0,6015.93,73,4.93
+2025-05-19,South,Office,Monitor,17847.0,4129.66,113,4.37
+2025-05-20,South,Home,Air Purifier,21589.0,6409.93,27,4.61
+2025-05-26,East,Electronics,Headphones,18290.0,2692.76,78,4.1
+2025-05-26,West,Office,Chair,58379.0,14660.68,42,4.71
+2025-06-02,East,Office,Desk,17543.0,2186.78,92,3.76
+2025-06-02,South,Office,Monitor,51195.0,7329.14,108,4.39
+2025-06-02,West,Home,Air Purifier,39419.0,8340.18,51,4.06
+2025-06-07,South,Electronics,Laptop,33787.0,5896.67,50,4.62
+2025-06-07,North,Electronics,Laptop,51812.0,15300.07,68,4.3
+2025-06-07,West,Office,Desk,14086.0,2252.77,109,3.87
+2025-06-08,East,Electronics,Headphones,56206.0,8791.57,39,3.73
+2025-06-09,South,Home,Air Purifier,19016.0,5731.92,55,3.72
+2025-06-17,North,Office,Monitor,41088.0,12774.36,96,4.12
+2025-06-18,North,Home,Vacuum,29960.0,6402.27,35,4.8
+2025-06-19,East,Home,Coffee Machine,14562.0,3641.25,74,4.09
+2025-06-24,West,Electronics,Headphones,27263.0,6297.64,94,4.78
+2025-07-04,West,Home,Air Purifier,45350.0,14029.39,112,4.42
+2025-07-09,East,Office,Desk,30214.0,8183.87,47,4.92
+2025-07-09,East,Home,Coffee Machine,55984.0,12641.2,98,4.3
+2025-07-10,East,Electronics,Smartphone,23163.0,4652.35,72,3.99
+2025-07-11,South,Office,Monitor,53163.0,11792.4,99,4.46
+2025-07-13,South,Home,Vacuum,24790.0,3737.07,66,4.13
+2025-07-15,South,Electronics,Smartphone,49391.0,7388.97,103,4.27
+2025-07-20,West,Office,Monitor,42380.0,7772.25,41,3.8
+2025-07-22,West,Electronics,Headphones,52730.0,13898.0,44,4.3
+2025-07-22,North,Home,Vacuum,59019.0,17495.93,80,4.46
+2025-07-23,North,Office,Desk,56392.0,7996.66,104,4.85
+2025-07-23,North,Electronics,Headphones,37140.0,5287.54,33,3.58
+2025-08-03,North,Electronics,Smartphone,16564.0,4632.25,80,4.9
+2025-08-04,East,Electronics,Laptop,56699.0,8297.41,99,3.63
+2025-08-05,West,Electronics,Headphones,29481.0,5577.12,54,3.72
+2025-08-11,West,Office,Chair,56934.0,12317.04,95,4.59
+2025-08-13,South,Office,Chair,39117.0,9620.23,70,4.28
+2025-08-14,South,Home,Coffee Machine,48668.0,14397.64,74,4.4
+2025-08-17,South,Electronics,Headphones,40323.0,5681.95,74,3.76
+2025-08-21,East,Office,Desk,43577.0,9242.41,112,4.51
+2025-08-21,East,Home,Coffee Machine,28014.0,8898.38,102,3.91
+2025-08-22,North,Office,Monitor,18595.0,6154.08,41,4.39
+2025-08-22,West,Home,Vacuum,38543.0,12563.12,59,4.22
+2025-08-26,North,Home,Air Purifier,49565.0,14617.97,113,3.88
+2025-09-01,West,Electronics,Laptop,43500.0,5566.08,25,3.58
+2025-09-01,North,Home,Air Purifier,40236.0,10901.59,76,4.18
+2025-09-01,East,Office,Desk,16341.0,5185.77,107,3.86
+2025-09-06,East,Home,Air Purifier,18865.0,5487.62,101,4.87
+2025-09-07,West,Office,Monitor,41084.0,12174.26,116,4.77
+2025-09-08,South,Home,Air Purifier,59857.0,18760.62,90,4.76
+2025-09-13,South,Electronics,Headphones,51619.0,9548.43,116,4.16
+2025-09-18,East,Electronics,Laptop,17108.0,5813.35,27,4.48
+2025-09-18,North,Office,Desk,17686.0,5431.68,108,3.68
+2025-09-20,North,Electronics,Laptop,30065.0,10133.68,25,4.93
+2025-09-22,South,Office,Chair,26492.0,8531.94,95,3.67
+2025-09-26,West,Home,Vacuum,14747.0,4368.24,116,4.66
+2025-10-02,South,Office,Desk,14616.0,3735.67,25,4.83
+2025-10-02,North,Electronics,Headphones,45509.0,13850.92,67,3.8
+2025-10-03,South,Home,Air Purifier,46059.0,7281.38,60,3.78
+2025-10-08,West,Office,Chair,17722.0,2649.45,115,3.96
+2025-10-11,West,Electronics,Laptop,19125.0,4433.89,90,4.21
+2025-10-18,West,Home,Air Purifier,32539.0,8278.48,63,4.12
+2025-10-18,East,Home,Air Purifier,39744.0,10887.9,49,4.91
+2025-10-20,North,Home,Vacuum,52854.0,8147.28,102,3.79
+2025-10-21,North,Office,Chair,17996.0,4157.02,76,4.45
+2025-10-22,East,Electronics,Smartphone,59041.0,13041.17,76,4.45
+2025-10-26,East,Office,Monitor,39475.0,5997.38,48,3.95
+2025-10-27,South,Electronics,Laptop,24996.0,6903.37,74,4.42
+2025-11-01,West,Electronics,Headphones,31937.88,9050.95,110,4.74
+2025-11-02,East,Office,Desk,42147.24,6131.94,30,4.76
+2025-11-05,West,Office,Monitor,62674.52,12653.83,92,4.4
+2025-11-09,East,Electronics,Headphones,43628.14,12912.69,48,4.76
+2025-11-10,South,Office,Chair,38595.44,9946.92,75,4.27
+2025-11-10,East,Home,Coffee Machine,17307.06,3145.29,78,3.76
+2025-11-13,North,Office,Monitor,16201.4,3435.47,70,3.84
+2025-11-16,North,Electronics,Laptop,37312.78,6264.01,115,3.98
+2025-11-19,North,Home,Vacuum,46582.86,11388.1,81,4.47
+2025-11-22,South,Electronics,Smartphone,51112.88,9689.32,48,4.32
+2025-11-25,South,Home,Coffee Machine,55885.98,17604.57,37,4.26
+2025-11-26,West,Home,Coffee Machine,20937.92,4193.49,72,4.99
+2025-12-01,North,Office,Monitor,36126.88,9428.95,56,3.81
+2025-12-02,East,Electronics,Laptop,24407.12,7799.61,114,3.85
+2025-12-05,North,Home,Coffee Machine,43900.72,6849.62,92,4.75
+2025-12-10,West,Office,Monitor,34924.46,8336.33,108,4.77
+2025-12-11,South,Office,Desk,22179.28,4848.7,105,3.62
+2025-12-13,South,Home,Coffee Machine,56940.9,12266.86,70,3.73
+2025-12-16,East,Office,Chair,30701.24,6995.08,119,4.24
+2025-12-19,North,Electronics,Smartphone,57891.98,10907.52,98,4.56
+2025-12-21,West,Electronics,Smartphone,50927.62,13620.32,100,3.59
+2025-12-23,South,Electronics,Headphones,70184.04,17006.52,44,4.99
+2025-12-23,East,Home,Vacuum,18923.66,3285.28,104,4.46
+2025-12-24,West,Home,Vacuum,41492.34,11995.36,90,4.26
